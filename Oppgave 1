@@ -1,0 +1,23 @@
+import math
+#importerer matteliste for Ã¥ kunne bruke log til senere
+
+
+print("Hvor mange H+ ioner er det i stoffet?")
+print("a*10^b")
+#Forteller brukeren hva oppgaven er og hvilken form det skal skrives pÃ¥
+
+a=int(input("a="))
+b=int(input("b="))
+#to input som forteller antall H+ ioner
+
+H=a*(10**b)
+pH=-(math.log10(H))
+#Regner ut bÃ¥de H og pH verdiene
+
+if 0<=pH<7:
+    print("pH verdien din er", pH, "og lÃ¸sningen din er sur")
+elif pH==7:
+    print("pH verdien din er", pH, "og lÃ¸sningen din er nÃ¸ytral")
+else:
+    print("pH verdien din er", pH, "og lÃ¸sningen din er basisk")
+#Output som fordeller pH verdien og om den er sur, nÃ¸ytral eller basisk
