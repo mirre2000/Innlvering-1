@@ -1,0 +1,35 @@
+import math
+#importerer matte listen for Ã¥ kunne bruke kvadratrot
+
+print("E=(1/2)mv^2")
+#skriver inn formelen
+
+x=input("Skal du finne E, m eller v?")
+#spør om det er E, m eller v som er ukjent
+
+if x=="E" or x=="e":
+    m1=int(input("m(kg)="))
+    v1=int(input("v(m/s)="))
+    E1=(1/2)*m1*(v1**2)
+    print("E=", E1, "J")
+    #har en if om svaret er E, spÃ¸r etter m og v og derretter regner det ut og printer det
+    
+elif x=="m" or x=="M":
+    print("m=(2E)/(v**2)")
+    E2=int(input("E(J)="))
+    v2=int(input("v(m/s)="))
+    m2=(2*E2)/(v2**2)
+    print("m=", m2,("kg"))
+    #har en elif om svaret er m, printer den omgjorte formelen, spÃ¸r etter E og v og printer svaret
+    
+elif x=="v" or x=="V":
+    print("v=sqrt((2E)/m)")
+    E3=int(input("E(J)="))
+    m3=int(input("m(kg)="))
+    v3=math.sqrt((2*E3)/m3)
+    print("v=", v3, ("m/s"))
+    #har en elif om svaret er v,printer den omgjorte formelen, spÃ¸r etter E og v og printer svaret
+    
+else:
+    ("Om du verken skel finne E, m eller v så burde du prøve enn annen formel enn denne")
+    #feilmelding om det du skriver inn ikke stemmer med oppgaven
