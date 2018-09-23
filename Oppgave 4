@@ -1,0 +1,17 @@
+n=int(input("n="))
+#spør etter å få vite n for å kunne regne fakulteten
+
+produkt=1
+
+if 0<=n:
+    for x in range(1,n):
+        produkt=produkt*(x+1)
+        #har en for løkke for å si at dataen må gjøre operasjonen fra 1 til n 
+        #sånn at den tar alle tallene og regner ut den
+        
+    print ("n!=", produkt)
+    #printer ut svaret etter at for løkken har gått n ganger
+    
+else:
+    print("Tallet må være større enn null")
+#har en if og en else fordi du kan ikke ta fakultet til et negativt tall
