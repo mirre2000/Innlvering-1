@@ -1,0 +1,29 @@
+s_v=input("kommer den til å synke eller vokse?")
+    #spør om befolkningn vil synke fremmover eller om den vil vokse
+    
+Bna=int(input("B(nåverende)="))
+p=int(input("p="))
+t=int(input("Hvor mange år frem i tid vil du vite B(ny) om?"))
+#samler dataen man trenger for å kunne løse stykket
+
+
+#bruker if og elif for om den skal synke eller skal vokse
+if s_v=="synke" or s_v=="Synke":
+    for y in range(1,(t+1)): 
+        By1=Bna*(1-(p/100))**y
+    
+    print ("Befolkningen om", t, "år kommer til å være", By1)
+    #skriver inn regnestykke i en løkke for å få regnestykket til å bli gjort til riktig år
+    #deretter printer ut svaret
+    
+elif s_v=="vokse" or s_v=="Vokse":
+    for y in range(1,(t+1)):
+        By2=Bna*(1+(p/100))**y
+    
+    print ("Befolkningen om", t, "år kommer til å være", By2)
+    #skriver inn regnestykke i en løkke for å få regnestykket til å bli gjort til riktig år
+    #deretter printer ut svaret
+    
+else:
+    print("Den må jo vokse eller synke...")
+    #har en feilmelding sånn at brukeren skal kjønne at han/hun har skrevet inn noe feil
